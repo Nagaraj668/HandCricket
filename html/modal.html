@@ -1,0 +1,82 @@
+<div class="modal fade" tabindex="-1" role="dialog"
+	ng-controller="ModalController" id="myModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header btn-success"
+				ng-class="{'btn-success' : !error, 'btn-danger' : error}">
+				
+				<h4 class="modal-title">{{title}}</h4>
+			</div>
+			<div class="modal-body">{{message}}</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary ok"
+					data-dismiss="modal">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="modal fade" tabindex="-1" role="dialog"
+	ng-controller="ModalController" id="listModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header btn-success" ng-show="title"
+				ng-class="{'btn-success' : !error, 'btn-danger' : error}">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">×</button>
+				<h4 class="modal-title">{{title}}</h4>
+			</div>
+			<div class="modal-body no-padding">
+				<div class="list-group no-margin">
+					<a href="" class="list-group-item" ng-repeat="data in List"
+						ng-click="itemSelected(data)">{{data.message}}</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" tabindex="-1" role="dialog"
+	ng-controller="ModalController" id="gameNameModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header btn-success"
+				ng-class="{'btn-success' : !error, 'btn-danger' : error}">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">×</button>
+				<h4 class="modal-title">{{title}}</h4>
+			</div>
+			<div class="modal-body">
+				<input type="text" class="form-control" ng-model="game.gameTitle" placeholder="Enter Game Name">
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary ok"
+					data-dismiss="modal" ng-click="onGroupNameEntered()">OK</button>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<div class="modal fade" tabindex="-1" role="dialog"
+	ng-controller="ModalController" id="regSetupModal">
+	<div class="modal-dialog">
+		<div class="modal-content">
+			<div class="modal-header btn-success"
+				ng-class="{'btn-success' : !error, 'btn-danger' : error}">
+				<button type="button" class="close" data-dismiss="modal"
+					aria-label="Close">×</button>
+				<h4 class="modal-title">{{title}}</h4>
+			</div>
+			<div class="modal-body">
+				<input type="text" class="form-control" ng-model="displayName" placeholder="Your good name..." />
+				
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-primary ok"
+					data-dismiss="modal" ng-click="onDisplayNameEntered()">OK</button>
+			</div>
+		</div>
+	</div>
+</div>

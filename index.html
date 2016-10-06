@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html ng-app="HandCricket">
+<head>
+<meta charset="utf-8">
+<meta name="viewport"
+	content="width=device-width, initial-scale=1 user-scalable=no">
+<meta charset="ISO-8859-1">
+<title>Hand Cricket</title>
+
+<!-- library CSS files -->
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/animate.css">
+<link rel="stylesheet" type="text/css" href="css/app.css">
+
+<!-- library JS files -->
+
+<script type="text/javascript" src="js/libs/jquery.min.js"></script>
+<script type="text/javascript" src="js/libs/bootstrap.min.js"></script>
+<script type="text/javascript" src="js/libs/angular.min.js"></script>
+<script type="text/javascript" src="js/libs/angular-route.min.js"></script>
+<script type="text/javascript" src="js/libs/ngStorage.min.js"></script>
+<script type="text/javascript" src="js/libs/firebase.js"></script>
+
+<!-- app JS files -->
+
+<script type="text/javascript" src="js/app/firebase_config.js"></script>
+<script type="text/javascript" src="js/app/utils.js"></script>
+<script type="text/javascript" src="js/app/index.js"></script>
+<script type="text/javascript" src="js/app/router-config.js"></script>
+<script type="text/javascript" src="js/app/ModalFactory.js"></script>
+<script type="text/javascript" src="js/app/ModalController.js"></script>
+<script type="text/javascript" src="js/app/LoginController.js"></script>
+<script type="text/javascript" src="js/app/LandingPageController.js"></script>
+<script type="text/javascript" src="js/app/YouVsFriendController.js"></script>
+<script type="text/javascript" src="js/app/TeamVsTeamController.js"></script>
+<script type="text/javascript" src="js/app/PlayersController.js"></script>
+
+</head>
+<body ng-controller="MainController">
+	<div ng-include="'html/nav-header.html'" ng-hide="ifLoginPage"></div>
+	<div class="container" ng-class="{'card' : !ifLoginPage}" style="height: 600px">
+		<div class="loadingWrapper hidden" align="center">
+			<div class="loadingBox bg-warning">
+				<img src="images/loader.gif" style="margin-right: 5px;margin-left:-30px;" width=29>Loading
+			</div>
+		</div>
+
+		<div ng-include="'html/modal.html'"></div>
+		<div ng-view></div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,73 @@
+@CHARSET "ISO-8859-1";
+
+.user-icon {
+	width: 18px;
+	height: 18px;
+}
+
+#displayName {
+	margin-left: 10px;
+}
+
+.box {
+	background-color: #e6e6e6;
+	border: 1px solid #cccccc;
+	box-shadow: 2px 2px 25px #aaa;
+	padding: 10px;
+}
+
+.box-small {
+	box-shadow: 2px 2px 15px #aaa;
+}
+
+.card {
+	background-color: #f3f3f3;
+	border: 1px solid #cacaca;
+	box-shadow: 1px 1px 6px #aaa;
+	padding: 10px; //
+	margin: 10px;
+}
+
+.card:HOVER {
+	/* 	box-shadow: 3px 3px 10px #aaa;
+	border: 1px solid #c4c4c4;
+	cursor: pointer; */
+	
+}
+
+.note_title {
+	font-size: large;
+}
+
+.modified_on {
+	font-size: small;
+	color: #aaa;
+	font-style: italic;
+	padding-bottom: 10px;
+}
+
+.note_content {
+	margin-top: 10px;
+	word-wrap: break-word;
+}
+
+.loadingBox {
+	border: 1px solid #bbb;
+	width: 200px;
+	color: black;
+	padding: 5px;
+}
+
+.loadingWrapper {
+	position: fixed;
+	width: inherit;
+	top: 50px;
+}
+
+.bold {
+	font-weight: bold;
+}
+
+.pointer {
+	cursor: pointer;
+}

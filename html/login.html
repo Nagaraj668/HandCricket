@@ -1,0 +1,44 @@
+
+<div class="row">
+	<div class="col-sm-4"></div>
+	<div class="col-sm-4">
+		<br> <br>
+		<h3 class="text-center">Hand Cricket</h3>
+		<br>
+		<form class="form-horizontal box box-small" onsubmit="false"
+			action="#">
+			<h4 class="text-center">Login or Register</h4>
+			<br>
+			<div class="form-group">
+				<div class="col-sm-12">
+					<input type="email" class="form-control" id="email"
+						placeholder="Enter email">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-12">
+					<input type="password" class="form-control" id="password"
+						placeholder="Enter password">
+				</div>
+			</div>
+			<div class="form-group">
+				<div class="col-sm-12" align="right">
+					<button type="button" class="btn btn-default" ng-click="register()">Sign
+						Up</button>
+					<button type="submit" class="btn btn-success"
+						ng-click="signInEmailPassword()">Sign In</button>
+				</div>
+			</div>
+
+			<br>
+			<div class="form-group">
+				<div class="col-sm-12" align="center">
+					<img alt="" src="images/google_signin.png" width="200"
+						class="pointer" ng-click="signInGoogle()"><br> <br>
+					<img alt="" src="images/facebook_signin.png" width="200"
+						class="pointer" ng-click="signInFacebook()">
+				</div>
+			</div>
+		</form>
+	</div>
+</div>
