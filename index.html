@@ -29,6 +29,7 @@
 <script type="text/javascript" src="js/app/router-config.js"></script>
 <script type="text/javascript" src="js/app/ModalFactory.js"></script>
 <script type="text/javascript" src="js/app/ModalController.js"></script>
+<script type="text/javascript" src="js/app/SpinnerController.js"></script>
 <script type="text/javascript" src="js/app/LoginController.js"></script>
 <script type="text/javascript" src="js/app/LandingPageController.js"></script>
 <script type="text/javascript" src="js/app/YouVsFriendController.js"></script>
@@ -38,7 +39,7 @@
 </head>
 <body ng-controller="MainController">
 	<div ng-include="'html/nav-header.html'" ng-hide="ifLoginPage"></div>
-	<div class="container" ng-class="{'card' : !ifLoginPage}" style="height: 600px">
+	<div class="container">
 		<div class="loadingWrapper hidden" align="center">
 			<div class="loadingBox bg-warning">
 				<img src="images/loader.gif" style="margin-right: 5px;margin-left:-30px;" width=29>Loading

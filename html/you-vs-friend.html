@@ -3,23 +3,59 @@
 <div class="container">
 	<div class="row">
 		<div class="col-sm-12 text-center">
-			<p class="title bold">You vs Friend</p>
+			<p class="bold">You vs Friend</p>
 			<p class="text-primary">Match Setup</p>
 		</div>
 
 		<div class="col-sm-12">
-
+			<br>
 			<div class="row">
 
 				<div class="col-sm-4" align="center">
-					
-					<button class="btn btn-success">STEP 1</button>
-					
-					<p ng-repeat="user in users">{{user.email_id}}</p>
+					<p class="text-primary text-center bold">1. OVERS AND WICKETS</p>
+					<br>
+					<p>Select Overs</p>
+					<div class="col-sm-5 input-group" ng-controller="SpinnerController"
+						ng-init="valueComponent='oversId'">
+						<span class="input-group-btn">
+							<button class="btn" ng-click="up()">
+								<span class="glyphicon glyphicon-menu-up" style="font-weight: bold;"></span>
+							</button>
+						</span> <input type="number" class="form-control text-center bold"
+							id="oversId" placeholder="Overs" ng-model="value"> <span
+							class="input-group-btn" ng-click="down()">
+							<button class="btn ">
+								<span class="glyphicon glyphicon-menu-down" style="font-weight: bold;"></span>
+							</button>
+						</span>
+					</div>
+					<br> <br>
+					<p>Select Wickets</p>
+					<div class="col-sm-5 input-group" ng-controller="SpinnerController"
+						ng-init="valueComponent='wicketsId'">
+						<span class="input-group-btn">
+							<button class="btn" ng-click="up()">
+								<span class="glyphicon glyphicon-menu-up" style="font-weight: bold;"></span>
+							</button>
+						</span> <input type="number" class="form-control text-center bold"
+							id="wicketsId" placeholder="Wickets" ng-model="value"> <span
+							class="input-group-btn">
+							<button class="btn" ng-click="down()">
+								<span class="glyphicon glyphicon-menu-down" style="font-weight: bold;"></span>
+							</button>
+						</span>
+					</div>
+					<br><br>
+					<button class="btn btn-primary col-sm-offset-4 col-sm-4" ng-click="ok()">OK</button>
+				</div>
+				<div class="col-sm-4">
+					<p class="text-primary text-center bold">2. PLAYERS</p>
 
 				</div>
-				<div class="col-sm-4"></div>
-				<div class="col-sm-4"></div>
+				<div class="col-sm-4">
+					<p class="text-primary text-center bold">3. TOSS</p>
+
+				</div>
 
 			</div>
 

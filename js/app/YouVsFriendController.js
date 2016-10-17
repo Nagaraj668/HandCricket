@@ -17,4 +17,10 @@ baseInstance.controller('YouVsFriendController', function($scope, $location,
 		L($scope.users.length);
 	});
 
+	$scope.ok = function() {
+		A($scope.value);
+	};
+	
+	
+	
 });

@@ -47,7 +47,8 @@ $.fn
 				$(this).addClass('animated ' + animationName).one(animationEnd,
 						function() {
 							$(this).removeClass('animated ' + animationName);
-							callBack();
+							if (callBack != undefined)
+								callBack();
 						});
 			}
 		});
